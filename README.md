@@ -1,0 +1,2 @@
+# palvelimet
+Palvelintenhallintakurssin kotitehtävät
