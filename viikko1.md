@@ -67,6 +67,8 @@ local:
 
         VirtualBox
 
+osfinger kertoo käyttöjärjestelmän ja virtual arvellakseni virtuaalikoneympäristön, jossa käyttöjärjestelmää ajetaan.
+
 
 local:
 
