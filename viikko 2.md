@@ -52,18 +52,34 @@ Yhteys luotu ilman virheitä. Varmistan vielä verkkoon yhdistymisen käyttämä
 
 Palvelin vastaa, joten verkko toimii.
 
-# c)
-
+# c) Oma orjansa
+Aloitan asentamalla salt-minion ja salt-master paketit virtuaalikoneelle.
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/02d977a5-faac-463f-9a9f-a1258545122a)
+
+Paketteja ei löytynyt, joten seuraan saltproject.io sivuilta löytyviä ohjeita saltin asentamisesta Debianille (HashCorp) 
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/fda83cd1-6209-4d77-bed0-60f06fbce19a)
 
+Unohdettuani 'sudo' komennon huomasin, että vagrantin automaattisilla käyttöoikeuksilla ei ole mahdollista luoda kansiota. Yritän uudestaan sudo oikeuksilla
+
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/b4a7a7a2-b934-4025-978c-7119495599e8)
+
+Päivitän myös paketit ajantasalle lisätäkseni curl paketin. 'sudo apt-get update' ja lataan paketin komennolla 'sudo apt-get install curl'
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ded7c683-c7df-4d95-be2c-98dfc32de697)
 
+Lisään asennusohjeen mukaiset tekstit tuskan kautta, sillä en keksinyt keinoa liittää Windowsista kopioimaani tekstiä virtuaalikoneelle. Onneksi kirjoittamiset menivät ensi yrittämällä oikein ja sain lisättyä avaimen ja lähteen saltin paketeille, sekä asennettua paketit
+
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/5a92b1df-19a3-4f64-b7a4-ccf04f20d955)
 
+Kokeilin komennolla 'salt '*' test.ping' vastaavatko orjat herralle. Vastaukseksi tuli virhe johtuen siitä, että mitään laitetta ei ole määritetty tämän verkon herra-orja arkkitehtuurissa orjaksi.
+
+Komento salt '*' test.ping avaaminen:
+* salt komento osoittaa komennon kuuluvaan salt ohjelmalle
+* '*' valitsee komennon kohteeksi kaikki verkkoon liitetyt orjat
+* test.ping tarkistaa saako herra vastauksia orjilta
+
+Selvitän ensin ovatko molemmat demonit käynissä.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/babbf413-0f01-4e9f-998b-4609a0489fcb)
 
