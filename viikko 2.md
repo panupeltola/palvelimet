@@ -109,6 +109,7 @@ Haun tehtyäni näin orjan avaimen hyväksymättömien avainten joukossa ja hyv�
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/57d5d060-4f61-40fe-a72d-b19509d86af1)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/87900443-a12c-4d8e-ace2-0d6a44cdf79d)
+
 Lopuksi testasin vielä herra-orja suhteen toimimista samaisella 'sudo salt '*' test.ping' komennolla ja tällä kertaa tuloksena näkyi käytössä oleva kone ja tila True.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/276e238f-c349-46da-bf8d-f05a1976da75)
