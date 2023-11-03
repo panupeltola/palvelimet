@@ -62,6 +62,21 @@ Palvelin vastaa, joten verkko toimii.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ded7c683-c7df-4d95-be2c-98dfc32de697)
 
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/5a92b1df-19a3-4f64-b7a4-ccf04f20d955)
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/babbf413-0f01-4e9f-998b-4609a0489fcb)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d0281b60-0c18-4ca8-a5c3-f15835ce57eb)
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/5e3ec89c-efe7-42ac-b168-2f3ec0749796)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/4f220f99-d4d6-4b3c-b8cd-f31cb3fa1d7e)
+
+
+
+
 
 
 
