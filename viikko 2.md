@@ -52,6 +52,20 @@ Yhteys luotu ilman virheitä. Varmistan vielä verkkoon yhdistymisen käyttämä
 
 Palvelin vastaa, joten verkko toimii.
 
+# c)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/02d977a5-faac-463f-9a9f-a1258545122a)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/fda83cd1-6209-4d77-bed0-60f06fbce19a)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/b4a7a7a2-b934-4025-978c-7119495599e8)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ded7c683-c7df-4d95-be2c-98dfc32de697)
+
+
+
+
+
 
 
 
