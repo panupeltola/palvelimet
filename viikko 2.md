@@ -77,23 +77,39 @@ Kokeilin komennolla 'salt '*' test.ping' vastaavatko orjat herralle. Vastaukseks
 Komento salt '*' test.ping avaaminen:
 * salt komento osoittaa komennon kuuluvaan salt ohjelmalle
 * '*' valitsee komennon kohteeksi kaikki verkkoon liitetyt orjat
-* test.ping tarkistaa saako herra vastauksia orjilta
+* test.ping tarkistaa saako herra vastauksia orjilta (HashCorp)
 
 Selvitän ensin ovatko molemmat demonit käynissä.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/babbf413-0f01-4e9f-998b-4609a0489fcb)
 
+Master on käynnissä.
+
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d0281b60-0c18-4ca8-a5c3-f15835ce57eb)
 
+Minion on käynnissä ja antaa virhetilaksi Master hostnamen virheellisyyden.
+Haen käynnissä olevan koneen IP-osoitteen komennolla 'hostname -I'
+Lisään minionin konffi tiedostoon tietoa komennolla 'sudoedit /etc/salt/minion' ja lisään tiedostoon herran IP-osoitteen oikeaan paikkaan. (Karvinen, 2023)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/5e3ec89c-efe7-42ac-b168-2f3ec0749796)
 
+Tässä vaiheessa yritän herättää demonit uudelleen henkiin ulkomuistista komennolla 'sudo systemctl reboot salt-minion'. Tällä saan aikaan virtuaalikoneen kaatumisen.
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/e8573249-60a4-4b0c-b0c4-1f16bf92713c)
+
+Varmistan hostnamen olevan yhä sama, kuin konffitiedostoon määritetty ja jatkan harjoitusta.
+Seuraavaksi etsin orjan avainta komennolla sudo salt-key
+
+
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/4f220f99-d4d6-4b3c-b8cd-f31cb3fa1d7e)
 
+Haun tehtyäni näin orjan avaimen hyväksymättömien avainten joukossa ja hyväksyin avaimen komennolla 'sudo salt-key -a'.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/57d5d060-4f61-40fe-a72d-b19509d86af1)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/87900443-a12c-4d8e-ace2-0d6a44cdf79d)
+Lopuksi testasin vielä herra-orja suhteen toimimista samaisella 'sudo salt '*' test.ping' komennolla ja tällä kertaa tuloksena näkyi käytössä oleva kone ja tila True.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/276e238f-c349-46da-bf8d-f05a1976da75)
 
