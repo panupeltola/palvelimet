@@ -3,6 +3,7 @@
 * Intel Core i7-10770K
 * Nvidia GeForce 3080
 * 32 GB RAM
+* Virtualbox 7.0.12
 
   # a) Asenna Vagrant
   Koneelta löytyy jo tuorein versio Virtualboxista, joten aloitan asentamalla Vagrantin.
@@ -113,6 +114,45 @@ Haun tehtyäni näin orjan avaimen hyväksymättömien avainten joukossa ja hyv�
 Lopuksi testasin vielä herra-orja suhteen toimimista samaisella 'sudo salt '*' test.ping' komennolla ja tällä kertaa tuloksena näkyi käytössä oleva kone ja tila True.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/276e238f-c349-46da-bf8d-f05a1976da75)
+
+# d) Asenna Saltin herra-orja arkkitehtuuri toimimaan verkon yli
+Käytän tähän Tero Karvisen ohjeessa "Salt Vagrant - automatically provision one master and two slaves" valmiiksi määritettyä verkkoympäristöä. (Karvinen, 2023)
+Muokkaan aiemmin luotua Vagrantfileä Windowsin notepad sovelluksella sisältämään ohjeen teksti.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8cd9315d-1c57-4517-8eb6-bd3ccc8ec125)
+
+Tutkiessani Karvisen ohjetta siitä miten virtuaalikoneet ovat määritetty huomaan pari asiaa. Vagrantfilessä määritetään kaksi eri tyyppiä master ja minion.
+Minionille lähetetään tiedostossa määritetty herran IP-osoite saltin minion konfiguraatiotiedostoon samalla tavalla, kirjoittamalla se /etc/sudo/minion/ tiedostoon.
+Tämän lisäksi jokaiselle koneelle ajetaan käsittääkseni koneen tyypin mukaiset määritetyt komennot käynnistyksen yhteydessä.
+Määrityksen yhteydessä annetaan myös valmiiksi koneille nimet "tmaster", "t001" ja "t002".
+
+
+
+Tämän jälkeen käynnistän ympäristön samalla tavalla kuin edellisessä tehtävässä komennolla 'vagrant up'
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/689e6091-dfa4-4a4f-84c5-6e7a0a28f7a6)
+
+Koneet käynnistyivät ilman virheilmoituksia.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/81855fb8-eb24-4254-b6ba-b379f1c14179)
+
+Edellisen harjoituksen perusteella oppimastani nopein tapa nähdä ovatko koneet määritetty oikein on varmistaa se herrakoneelta 'sudo salt-key' komennolla.
+Mikäli kaksi orjaa näkyvät luettelossa hyväksymättöminä avaimina on yhteyden muodostaminen onnistunut.
+Kokeilen testin vuoksi mihin koneeseen verkossa komento 'vagrant ssh' yhdistää.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7bf8f70c-1d93-48ea-a2c2-2adc6f40bc4b)
+
+Komento yhdisti "tmaster" koneeseen. Tämä johtuu Vagrantfilessä tmasterin konfiguraatiossa olevasta komennnosta 'primary: true do |tmaster|', mikä tekee tmaster koneesta oletusen niissä komennoissa, missä pitää valita kone tai ryhmä, mutta sitä ei ole erikseen komennolla määritetty. (HasshCorp)
+
+
+
+
+
+Yhdistän ensin kuitenkin herra koneeseen komennolla 'vagrant ssh tmaster'. Tässä tmaster on herra koneen nimi, jota tarvitaan koska tässä verkossa on enemmän kuin yksi kone, joten pelkkä 'vagrant ssh'
+
+
+
 
 
 
