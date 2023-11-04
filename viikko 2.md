@@ -143,13 +143,36 @@ Kokeilen testin vuoksi mihin koneeseen verkossa komento 'vagrant ssh' yhdistää
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7bf8f70c-1d93-48ea-a2c2-2adc6f40bc4b)
 
-Komento yhdisti "tmaster" koneeseen. Tämä johtuu Vagrantfilessä tmasterin konfiguraatiossa olevasta komennnosta 'primary: true do |tmaster|', mikä tekee tmaster koneesta oletusen niissä komennoissa, missä pitää valita kone tai ryhmä, mutta sitä ei ole erikseen komennolla määritetty. (HasshCorp)
+Komento yhdisti "tmaster" koneeseen. Tämä johtuu Vagrantfilessä tmasterin konfiguraatiossa olevasta komennnosta 'primary: true do |tmaster|', mikä tekee tmaster koneesta oletusen niissä komennoissa, missä pitää valita kone tai ryhmä, mutta sitä ei ole erikseen komennolla määritetty. (HashCorp)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/237849e0-e9a0-4496-8a85-508e43019a41)
+
+'sudo salt-key' Komento näyttää molemmat orjat luettelossa. Hyväksyn niiden avaimen ja varmistan verkon toimivuuden 'sudo salt '*' test.ping' komennolla.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/759b1c9c-1e90-4ae5-9af8-acb92d48d921)
+
+
+Molemmat koneet antavat vastaukseksi 'True', joten oletan tässä vaiheessa verkon toimivan.
+
+
+# e) Aja useita idempotentteja (state.single) komentoja verkon yli
+
+Testaan komentoja ajamalla niitä herrakoneelta orjille.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/2db7d261-c287-4a49-b99b-d6466bfbf913)
+
+Yrittäessäni ajaa komentoa 'sudo salt-call '*' state.single pkg.installed tree' tuli virheeksi sama virhe kuin edellisessä tehtävässä, missä master kone on väärin konfiguroitu minionille. Tämän ei pitäisi kuitenkaan olla mahdollista, sillä molemmat orjat on yhdistetty jo tmasteriin onnistuneesti. Tutkin onko komento väärä ja yrittääkö salt-call asentaa ohjelmaa myös tmasterille, mikä ei ole orjana millekkään.
 
 
 
 
 
-Yhdistän ensin kuitenkin herra koneeseen komennolla 'vagrant ssh tmaster'. Tässä tmaster on herra koneen nimi, jota tarvitaan koska tässä verkossa on enemmän kuin yksi kone, joten pelkkä 'vagrant ssh'
+
+
+
+
+
+
 
 
 
