@@ -306,6 +306,12 @@ Yritin myös liikkua komennoilla koneen t001 sisällä, mutta pwd pysyy koko aja
 
 
 https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.grains.html
+https://docs.saltproject.io/en/latest/topics/execution/remote_execution.html
+https://developer.hashicorp.com/vagrant/docs/multi-machine#specifying-a-primary-machine
+https://phoenixnap.com/kb/ubuntu-list-installed-packages
+https://terokarvinen.com/2021/salt-run-command-locally/
+https://terokarvinen.com/2023/salt-vagrant/
+https://terokarvinen.com/2023/configuration-management-2023-autumn/
 
 
 
