@@ -275,6 +275,19 @@ Yritin myös liikkua komennoilla koneen t001 sisällä, mutta pwd pysyy koko aja
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/cfc3caf6-0703-4375-8696-32b0a25559d3)
 
 
+# h) Hello, IaC
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/b38058fe-1732-48fa-bbe0-b39669918c59)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8e8ebf87-b0c1-4e84-bddb-d02717aaf295)
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/bdc78833-d2fe-4e12-b853-8acbdfa060d1)
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/c2b1eb2b-1b7d-4401-a493-947ce0eeeb9b)
+
 
 
 
