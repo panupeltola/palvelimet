@@ -204,6 +204,96 @@ Tarkastan vielä saman asian tmaster koneelta
 Pakettia tree ei ole asennettu, joten tästä voi päätellä, etteivät "salt '*'" komennot aja herralla samoja komentoja kuin orjilla
 
 
+Yritän vielä muita komentoja:
+
+'sudo salt '*' state.single sevice.running salt-minion
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/9d8a5a56-de2e-49ea-b0f7-e39a569f45ed)
+
+t001
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/96e9a234-0ba3-4059-ab29-b2e6d09faf27)
+
+t002
+
+
+Komento toimii, koitan vielä miten koneet reagoivat.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/edddb040-b467-4999-903b-95c43803fce4)
+
+Komento toimi, mutta koneet eivät vastanneet enää, sillä suljin salt-minion demonin.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/0fc5efcf-5b4f-4ac2-a8cf-7af0ef0b5b62)
+
+Komennolla ei myöskään voinut enää palauttaa demonia toimintaan. Käynnistän sen orja koneilta erikseen komennolla 'sudo systemctl start salt-minion'.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/30cd2848-8a1a-4757-904b-176c778581c0)
+Esimerkki t001 koneelta
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/1d6fba1c-ad86-49f3-b763-817a93fcaddc)
+
+Koneet saatu takaisin verkkoon
+
+Komennot toimivat samalla tavalla, kuin viikon 1 tehtävissä testauksen jälkeen, joten luotan niiden toimivan oikein myös muissa tärkeimmissä komennoissa.
+
+
+# f) Kerää teknistä tietoa orjista verkon yli (grains.item)
+
+Ajan komennon 'sudo salt '*' grains.items' saadakseni tietoon halutut parametrit verkon orjista.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/3429d93c-7e0f-4f10-94f2-3de6f5523191)
+t001 alku
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/37a8ba07-c377-4f02-ad86-09ef68d1e5e5)
+
+t002 alku
+
+
+Hetken komentoa 'sudo salt '*' grains.items osfinger' ihmettelin minkä takia vastaukseksi tuli aina koko lista ominaisuuksista vaikka pyysin vain yhtä.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/98f6900e-6e06-4653-962b-435b0d3bd10d)
+
+Lopulta ymmärsin komennon olevan väärä ja todellisuudessa komennon tulee olla muotoa 'grains.item osfinger'. Yksi s kirjain muutti koko komennon toiminnan tässä tapauksessa (HashCorp)
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/53f3112d-0572-4d20-bdf3-a681e8804787)
+
+
+# g) Aja shell-komento orjalla verkon yli.
+
+Käytän Salt Projectin esimerkkiä oppaana ja ajan komennon 'sudo salt 't001' cmd.run 'ls -l /etc''
+Kohdistan komennon pelkästään koneelle t001 tässä tapauksessa kokeilun vuoksi
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/74919753-9571-4a30-bbb4-2046a777aa2a)
+
+
+Komento palauttaa listan t001 /etc kansion sisällöstä.
+
+Yritin myös liikkua komennoilla koneen t001 sisällä, mutta pwd pysyy koko ajan rootissa, eikä komennolla voi luoda ilmeisesti uusia kansioita (Ainakaan ne eivät näy orjakoneella)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/cfc3caf6-0703-4375-8696-32b0a25559d3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.grains.html
+
 
 
 
