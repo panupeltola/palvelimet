@@ -163,6 +163,62 @@ Testaan komentoja ajamalla niitä herrakoneelta orjille.
 
 Yrittäessäni ajaa komentoa 'sudo salt-call '*' state.single pkg.installed tree' tuli virheeksi sama virhe kuin edellisessä tehtävässä, missä master kone on väärin konfiguroitu minionille. Tämän ei pitäisi kuitenkaan olla mahdollista, sillä molemmat orjat on yhdistetty jo tmasteriin onnistuneesti. Tutkin onko komento väärä ja yrittääkö salt-call asentaa ohjelmaa myös tmasterille, mikä ei ole orjana millekkään.
 
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/c3e2f8e2-7d2f-457b-bfdf-b0ba711ef3d5)
+
+Yrittäessäni muokata minion tiedostoa tmaster koneella sain tiedon, ettei koko tiedostoa löydy. Googlasin siis 'salt-call' komennon ja  totesin komennon olevan ongelman etsimiseen nykyisessä kontekstissa, eikä koneiden hallintaan tarkoitettu. Tämän hoitaa komento 'salt'. (HashCorp)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/188d5083-d047-438f-8c50-eed767893c6f)
+t001 
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/eb70af02-40f1-443d-9800-ab4678b7c315)
+t002
+
+
+Sain komennolla 'sudo salt '*' state.single pkg.installed tree' tarkastettua koneiden idempotentin paketin 'tree' asennettuna olemisen osalta. (Karvinen, 2021)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7562ed0e-9166-401d-8c52-7415abae56d9)
+t001
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/2850f0f9-099b-496f-b6cc-dd18aafc7269)
+t002
+
+Komento 'sudo salt '*' state.single pkg.removed tree' tarkasti koneiden idempotentin paketin puutteesta.
+
+Asensin vielä "tree" paketin orjille ensimmäisellä komennolla varmistaakseni ohjelmiston asentumisen ja tarkastamalla sen orjilta.
+
+Poistun tmaster koneesta komennolla exit ja kirjaudun sisään koneelle t001 komennolla vagrant ssh t001. Tässä on määritettävä koneen nimi, sillä aiemmin mainittuna komennon vakiokohde on tmaster ilman erillistä määritystä.
+
+t001 näyttää seuraavaa komennolla 'sudo apt list tree' joka tarkastaa paketin tree asennettuna olemisen (Dancuk, 2022)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d6a23abb-4049-4e81-a521-d6bb684b3bf2)
+
+Paketti näkyy asennettuna, tarkastan sen myös koneesta t002 samoilla askeleilla.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/c57d121f-3245-47a5-9363-cf5fc4432338)
+
+Näkyy asennettuna.
+
+Tarkastan vielä saman asian tmaster koneelta
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/446f7818-4a8a-4221-877c-386de9d36d33)
+
+Pakettia tree ei ole asennettu, joten tästä voi päätellä, etteivät "salt '*'" komennot aja herralla samoja komentoja kuin orjilla
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
