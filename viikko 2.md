@@ -248,6 +248,7 @@ Paketti näkyy asennettuna, tarkastan sen myös koneesta t002 samoilla askeleill
 Näkyy asennettuna.
 
 Tarkastan vielä saman asian tmaster koneelta
+
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/446f7818-4a8a-4221-877c-386de9d36d33)
 
 Pakettia tree ei ole asennettu, joten tästä voi päätellä, etteivät "salt '*'" komennot aja herralla samoja komentoja kuin orjilla
