@@ -48,15 +48,15 @@ Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves
 * 32 GB RAM
 * Virtualbox 7.0.12
 
-  # a) Asenna Vagrant
-  Koneelta löytyy jo tuorein versio Virtualboxista, joten aloitan asentamalla Vagrantin.
-  Yksinkertaisen asennusohjelman jälkeen Vagrant on asennettu:
+# a) Asenna Vagrant
+Koneelta löytyy jo tuorein versio Virtualboxista, joten aloitan asentamalla Vagrantin.
+Yksinkertaisen asennusohjelman jälkeen Vagrant on asennettu:
   
-  ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8603b93d-b23b-4574-94ae-7fc2e8a4982e)
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8603b93d-b23b-4574-94ae-7fc2e8a4982e)
 
-  Vagrant haluaa, että kone käynnistetään uudestaan, teen sen.
+Vagrant haluaa, että kone käynnistetään uudestaan, teen sen.
 
-  ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/68f2dd38-f22d-4238-92d3-2d7fcf8be229)
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/68f2dd38-f22d-4238-92d3-2d7fcf8be229)
 
 Seuraavaksi avaan komentokehoitteen haluamasdtani kansiosta, helpoimmaksi tavaksi tähän olen aikanaan oppinut valita Windowsin resurssinhallinnasta kansion polun ja kirjoittamalla sen tilalle cmd.
 
@@ -82,8 +82,10 @@ Vagrant on nyt asennettu tämän hetken tiedon mukaan onnistuneesti, sillä sain
 Aloitetaan luomalla äsken alustettu kone 'vagrant up' komennolla
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/bbb8d7d0-2e39-46d0-bd00-e43cf227f813)
+
 1/2
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/0d2ba49d-5847-4f76-aec3-320f4e73e5e0)
+
 2/2
 
 Vagrant loi virtuaalikoneen ilman virheilmoituksia. Yritän ottaa koneeseen ssh yhteyden komennolla vagrant ssh.
@@ -211,18 +213,22 @@ Yrittäessäni ajaa komentoa 'sudo salt-call '*' state.single pkg.installed tree
 Yrittäessäni muokata minion tiedostoa tmaster koneella sain tiedon, ettei koko tiedostoa löydy. Googlasin siis 'salt-call' komennon ja  totesin komennon olevan ongelman etsimiseen nykyisessä kontekstissa, eikä koneiden hallintaan tarkoitettu. Tämän hoitaa komento 'salt'. (HashCorp)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/188d5083-d047-438f-8c50-eed767893c6f)
+
 t001 
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/eb70af02-40f1-443d-9800-ab4678b7c315)
+
 t002
 
 
 Sain komennolla 'sudo salt '*' state.single pkg.installed tree' tarkastettua koneiden idempotentin paketin 'tree' asennettuna olemisen osalta. (Karvinen, 2021)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7562ed0e-9166-401d-8c52-7415abae56d9)
+
 t001
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/2850f0f9-099b-496f-b6cc-dd18aafc7269)
+
 t002
 
 Komento 'sudo salt '*' state.single pkg.removed tree' tarkasti koneiden idempotentin paketin puutteesta.
@@ -271,6 +277,7 @@ Komento toimi, mutta koneet eivät vastanneet enää, sillä suljin salt-minion 
 Komennolla ei myöskään voinut enää palauttaa demonia toimintaan. Käynnistän sen orja koneilta erikseen komennolla 'sudo systemctl start salt-minion'.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/30cd2848-8a1a-4757-904b-176c778581c0)
+
 Esimerkki t001 koneelta
 
 
@@ -286,6 +293,7 @@ Komennot toimivat samalla tavalla, kuin viikon 1 tehtävissä testauksen jälkee
 Ajan komennon 'sudo salt '*' grains.items' saadakseni tietoon halutut parametrit verkon orjista.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/3429d93c-7e0f-4f10-94f2-3de6f5523191)
+
 t001 alku
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/37a8ba07-c377-4f02-ad86-09ef68d1e5e5)
@@ -325,7 +333,9 @@ Luodaan ensin vaadittava kansio /srv/salt/hello ja luodaan sen sisään tiedosto
 
 Seuraavassa kohdassa lisään ajettavan init tiedoston sisään idempotenttitilan /tmp/infra-as-code tiedoston olemassa olosta. Tämä tapahtuu 'file.managed' komennolla.
 Mikäli tiedostoa ei löydy se luodaan. (Karvinen, 2017)
+
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/b38058fe-1732-48fa-bbe0-b39669918c59)
+
 Komentokehote ajetaan komennolla 'sudo salt '*' state.apply hello'. Tämä ajaa vain hello kehotteen ja kyseinen kehote pitää mainita joka kerta kun se halutaan ajaa.
 'state.apply' komento toteuttaa tiedostot, jotka on konfiguroitu sen top.sls tiedostoon. (HashCorp)
 
