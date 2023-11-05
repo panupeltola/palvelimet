@@ -1,3 +1,39 @@
+# Viikon 2 tehtävät
+
+# x)
+
+Slater 2017: What is the definition of "cattle not pets"
+* Palvelinkoneista tehdään joissain tapauksissa verkon toiminnan kannalta korvaamattomia
+* Niiden rakentamiseen käytetään valtava määrä aikaa ja energiaa, sekä yhdelle koneelle jää suuri määrä vastuuta verkon toiminnan kannalta
+* Tällaisia verkkoja kutsutaan artikkelissa lemmikeiksi, joita varjellaan ja pidetään uniikkeina.
+* Vastakohdaksi nostetaan palvelinkoneiden pitämistä tuotantokarjana.
+* Nopeasti uusittavilla ja ylipäätään suurella määrällä saadaan luotettavuutta verkkoon, missä yhden koneen puuttuminen ei ole välttämättä edes huomattavissa
+* Uudet palvelinkoneet voidaan luoda automaatiolla.
+* Nopeasti vaihtuvat koneet eivät kuitenkaan toimi tekstin mukaan hallituissa ympäristöissä.
+(Slater, 2017)
+
+Karvinen 2017: Vagrant Revisited – Install & Boot New Virtual Machine in 31 seconds  
+* Ohjeessa opetetaan luomaan uusi virtuaalikone käyttäen Vagrant ja Virtualbox ympäristöä
+* Ensimmäisessä osassa päivitetään linuxin pakettitiedot ja asennetaan Vagrant sekä Virtualbox
+* Toisessa osiossa alustetaan virtuaalikone, käynnistetään se ja otetaan siihen SSH-yhteys
+* Lopuksi virtuaalikone tuhotaan
+(Karvinen, 2017)
+  
+Toisen osion komennot
+
+* 'vagrant init' = Luo virtuaalikoneen luomiseen käytettävän Vagrantfilen, mikäli sellaista ei vielä ole työkansiossa. Koneelle voi myös antaa paljon muita arvoja kuin koneen tyypin, esimerkiksi nimen. 
+* Mikäli työkansiossa on jo Vagrantfile, komento ei luo uutta
+* 'vagrant up' = Luo Vagrantfilen määrittämän virtuaalikoneen tai koneet
+* 'vagrant ssh' = Ottaa SSH-yhteyden virtuaalikoneeseen
+* Mikäli 'vagrant up' komennolla olisi luotu useampi virtuaali kone tämä komento yhdistäisi vakiovaihtoehdoksi määritettyyn koneeseen
+ (HashCorp)
+
+Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves
+* Ohjeessa kuvataan verkkoympäristön luominen käyttäen valmista konfigurointitiedostoa
+
+  
+
+
 # Ympäristö
 * Windows 10
 * Intel Core i7-10770K
