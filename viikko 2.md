@@ -30,6 +30,13 @@ Toisen osion komennot
 
 Karvinen 2023: Salt Vagrant - automatically provision one master and two slaves
 * Ohjeessa kuvataan verkkoympäristön luominen käyttäen valmista konfigurointitiedostoa
+* Konfigurointitiedostossa luodaan kaksi konetyyppiä, joiden pohjalta luodaan kolme konetta. Kaksi orjaa ja yksi herra.
+* Yhdellä herrakoneella voidaan hallita kahta orjaa saltin avulla
+* Ohjeessa käydään läpi Karvisen ohjeen "Run Salt Command Locally" (Karvinen, 2021) komentoja
+* Tämän lisäksi koneista kerätään keskitetysti tietoa.
+* Lopussa luodaan ja ajaetaan automaatioon johtavaa komentoa.
+* Tämän ohjeen avulla saa erittäin helposti luotua kolmen koneen toimiva ympäristö, jota käytän myös tämän viikon myöhemmissä tehtävissä.
+(Karvinen, 2023)
 
   
 
