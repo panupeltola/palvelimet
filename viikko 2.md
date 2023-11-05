@@ -320,41 +320,43 @@ Yritin myös liikkua komennoilla koneen t001 sisällä, mutta pwd pysyy koko aja
 
 # h) Hello, IaC
 
+Luodaan ensin vaadittava kansio /srv/salt/hello ja luodaan sen sisään tiedosto init.sls 
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/66e5e0e7-d73d-47ab-b5c0-2a222cba1646)
 
+Seuraavassa kohdassa lisään ajettavan init tiedoston sisään idempotenttitilan /tmp/infra-as-code tiedoston olemassa olosta. Tämä tapahtuu 'file.managed' komennolla.
+Mikäli tiedostoa ei löydy se luodaan. (Karvinen, 2017)
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/b38058fe-1732-48fa-bbe0-b39669918c59)
+Komentokehote ajetaan komennolla 'sudo salt '*' state.apply hello'. Tämä ajaa vain hello kehotteen ja kyseinen kehote pitää mainita joka kerta kun se halutaan ajaa.
+'state.apply' komento toteuttaa tiedostot, jotka on konfiguroitu sen top.sls tiedostoon. (HashCorp)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8e8ebf87-b0c1-4e84-bddb-d02717aaf295)
-
+t001
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/bdc78833-d2fe-4e12-b853-8acbdfa060d1)
+t002
 
+Kun komento on ajettu, siitä tulee vastaukseksi molemmilta koneilta saman tyyppinen viesti, kuin mitä aiemmin ajettuna 'file.managed' komennolla, eli state.apply' komennolla saadaan tämäkin automatisoitua.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/c2b1eb2b-1b7d-4401-a493-947ce0eeeb9b)
 
+Lopuksi vielä varmistan tiedoston olemassa olon molemmilla koneilla ajamalla niille shell komennon 'ls /tmp/' saltin avulla komennolla 'sudo salt '*' cmd.run 'ls /tmp/''.
+Molempien koneiden hakemistoissa näkyy tiedosto infra-as-code joten totean 'state.apply' komennon toimineen oikein
 
 
 
+Lähteet:
+* T. Karvinen, 2023, Infra as Code 2023, https://terokarvinen.com/2023/configuration-management-2023-autumn/, luettu 5.11.2023
+* T. Karvinen, 2017, Vagrant Revisited – Install & Boot New Virtual Machine in 31 seconds, https://terokarvinen.com/2017/04/11/vagrant-revisited-install-boot-new-virtual-machine-in-31-seconds/, luettu 4.11.2023
+* T. Karvinen, 2021, Run Salt Command Locally, https://terokarvinen.com/2021/salt-run-command-locally/, luettu 4.11.2023
+* T. Karvinen, 2023, Salt Vagrant - automatically provision one master and two slaves, https://terokarvinen.com/2023/salt-vagrant/, luettu 4.11.2023
+* Salt Project, salt.modules.grains, https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.grains.html, luettu 5.11.2023
+* Salt Project, Running Commands on Salt Minions, https://docs.saltproject.io/en/latest/topics/execution/remote_execution.html, luettu 5.11.2023
+* HashCorp, Multi-Machine, https://developer.hashicorp.com/vagrant/docs/multi-machine#specifying-a-primary-machine, luettu 4.11.2023
+* HashCorp, Init, https://developer.hashicorp.com/vagrant/docs/cli/init, luettu 4.11.2023
+* HashCorp, Up, https://developer.hashicorp.com/vagrant/docs/cli/up, luettu 4.11.2023
+* HashCorp, SSH, https://developer.hashicorp.com/vagrant/docs/cli/ssh, luettu 4.11.2023
+* M. Dancuk, How to List Installed Packages on Ubuntu, https://phoenixnap.com/kb/ubuntu-list-installed-packages, luettu 4.11.2023
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.grains.html
-https://docs.saltproject.io/en/latest/topics/execution/remote_execution.html
-https://developer.hashicorp.com/vagrant/docs/multi-machine#specifying-a-primary-machine
-https://phoenixnap.com/kb/ubuntu-list-installed-packages
-https://terokarvinen.com/2021/salt-run-command-locally/
-https://terokarvinen.com/2023/salt-vagrant/
-https://terokarvinen.com/2023/configuration-management-2023-autumn/
 
 
 
