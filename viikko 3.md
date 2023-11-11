@@ -91,9 +91,8 @@ Ajettuani komennon, tuli virhe, ettei käyttäjälleni ole vielä määritetty s
 Ajettuani komennot terminaalini meni tilaan, mistä en päässyt takaisin ajamaan komentoja.
 Asiaa tutkittuani totesin, että olin unohtanut lainausmerkit komennon 'git config --global user.email "bha531@myy.haaga-helia.fi' lopusta. Lisättyäni ne sain muutettua sähköpostin ja tein saman nimelle seuraavaksi
 
-![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7d9d5303-2315-4838-9380-56483c0abb86)
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/474f1147-5b5e-4a7d-870e-a8e85f352b5e)
 
-![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8ab9b1cc-5eb5-4f36-8442-80e7a9afa205)
 
 
 Yritin seuraavaksi komentoa 'git commit' uudelleen.
@@ -109,7 +108,8 @@ Lisätty teksi.
 
 Terminaali antoi seuraavan vastauksen tallennettuani ja poistuttuani ikkunasta.
 
-![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/adaecbae-0a52-400e-b5bb-70dfd0fa7c19)
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/302bb0d9-1f27-4b74-a831-753253513775)
+
 
 Tarkastan seuraavaksi näkyykö tiedosto verkkoselaimessa.
 
