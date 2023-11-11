@@ -1,4 +1,4 @@
-# Host ympäristö:
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/41046f1f-43bd-42dd-9dd6-260f01fece58)# Host ympäristö:
 * Windows 10
 * Intel Core i7-10770K
 * Nvidia GeForce 3080
@@ -88,7 +88,27 @@ Teen sen seuraavaksi komennoilla 'git add .' ja 'git commit'
 Ajettuani komennon, tuli virhe, ettei käyttäjälleni ole vielä määritetty sähköpostia tai nimeä. Näille annettiin komennot virheviestissä. Lisään nämä ja yritän ajaa komentoa uudestaan.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/eca000c7-b9db-47bf-8c8c-4687206416d4)
-Ajettuani komennot terminaalini meni tilaan, mistä en päässyt takaisin ajamaan komentoja. Päätin käynnistää koneen uudelleen.
+Ajettuani komennot terminaalini meni tilaan, mistä en päässyt takaisin ajamaan komentoja.
+Asiaa tutkittuani totesin, että olin unohtanut lainausmerkit komennon 'git config --global user.email "bha531@myy.haaga-helia.fi' lopusta. Lisättyäni ne sain muutettua sähköpostin ja tein saman nimelle seuraavaksi
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7d9d5303-2315-4838-9380-56483c0abb86)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8ab9b1cc-5eb5-4f36-8442-80e7a9afa205)
+
+
+Yritin seuraavaksi komentoa 'git commit' uudelleen.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/bfd3236c-6f94-4230-b0e7-0144b6dd2ceb)
+
+Sain komennon toimimaan ja pääsin nano ikkunaan, mihin listaan seuraavaksi käskynä, preesenssissä ja englanniksi Teron viime luennon ohjeen mukaisesti.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/9633ff31-2e36-4624-9cda-75f1680c5268)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d2c5b834-85af-4f03-acea-838b2dd9b729)
+
+
+
+
 
 
 
