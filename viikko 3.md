@@ -130,6 +130,86 @@ Tarkastan vielä, että myös sisältö on tullut mukana.
 
 Oikealta näyttää.
 
+# c) Doh!
+Jatkan siitä mihin jäin. Haluan seuraavassa harjoituksessa koettaa miten komento 'git reset --hard' toimii.
+Luon kaksi tiedostoa ja ajan komennon 'git reset --hard'
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/26bd9513-42ec-4435-a766-2e3b2376c9ba)
+
+Komentoa 'git add .' ei ole ajettu, eikä 'git reset --hard' vaikuta tekevän tässä vaiheessa mitään. Tiedostot näkyvät yhä 'git status' komennolla.
+Ajan komennon 'git add .'
+Katson tiedostojen tilan 'git status komennolla' Tämän jälkeen koitan ajaa komennon 'git reset --hard'
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/26b10bd9-2748-4a65-b8e9-8cbe55398e71)
+
+'git reset --hard' poisti työn aikaiset tiedostot ja palautti tilanteeksi edellisen 'git commit' komennon jälkeisen tilanteen.
+Ennen lopullista päätelmääni haluan vielä koettaa miten käy jos vain osa tiedostoista on ollut muutettuna ennen 'git add .' komentoa
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/67afe71f-d736-402e-9e7b-49aaa3fd2d99)
+
+Ajan vielä komennot git reset --hard ja git status
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ea998520-c8ec-4cb9-a219-e47d1edf7ea9)
+
+Vain tiedosto test.txt on poistunut ja "eitallenna" pysyi osiossa "Untracked files". Tästä voi päätellä komennon käyttäytymisestä, että 'git reset --hard' poistaa edellisen 'git commit' jälkeen tehdyt muutokset, joiden jälkeen on ajettu komento 'git add .'
+
+
+# d) Tukki
+Ajoin komennon git log --patch
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/70139ec5-cc0e-42a8-b147-e9f258a9d525)
+
+Tästä logista ei sinänsä voi vielä päätellä kauheasti, mutta oletettavasti "+" tarkoittaa lisättyä.
+Kokeilen luoda kolme tiedostoa, lisätä yhteen, poistaa yhdestä ja pitää yhden sellaisenaan nähdäkseni miten ne kirjautuvat lokiin.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/dbbd6eb2-23d8-4e69-9de4-3d0f9722149c)
+
+Tiedostojen luonti (myös aiemmin roikkumaan jäänyt "eitallenna" päätyi nyt joukkoon)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/02dd1c47-fdb9-4de2-98c2-76823868cf4d)
+
+Ajetaan muutokset.
+
+Tiedostoon Grute lisään tekstiä:
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/003ec975-7491-4e60-9dae-3cec16cb1660)
+
+alkuperäinen
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/565aa545-b81f-43f0-ada7-c096ad086003)
+
+Lisätty
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/1e9ca0d1-b7d8-4b7b-bf21-f354ebf92153)
+
+Alkuperäinen (Poistin vahingossa tekstiä ennen kuvan ottamista ja palautin ennalleen, siksi näkyy muokattuna.)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/72303929-c834-47f0-b12e-5fc7cd9a7dc5)
+
+Poistettu
+
+Poistin myös tiedoston "eitallenna"
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/c844fcf4-afa9-47ab-9118-283a78fbab40)
+
+Seuraavaksi ajan komennon 'git add .' ja 'git commit' nähdäkseni miten tämä näkyy lokeissa.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ba9bcb83-953a-4924-9a61-460720d0c26e)
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/9b0fca84-2dc1-44a4-bcc6-56139533ab2d)
+
+Lokista katsottuna tiedosto "Grute" on päivittänyt lisätyn rivin tiedot. Tiedosto "Poro" käsittelee muuttunutta riviä näyttämällä edellisen rivin punaisella ja miinusetumerkillä poistuneena ja sen korvanneen tekstin vihreänä plus etumerkillä 
+Tästä päättelen, että gitin loki merkkaa muutokset aina täysin poistuneina ja uudelleen tehtyinä, eikä yritä näyttää muutosta muulla tavalla.
+
+
+
+
+
+
+
+
+
+
 
 
 
