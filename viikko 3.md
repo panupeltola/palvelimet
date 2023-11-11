@@ -196,11 +196,15 @@ Seuraavaksi ajan komennon 'git add .' ja 'git commit' nähdäkseni miten tämä 
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ba9bcb83-953a-4924-9a61-460720d0c26e)
 
+Viedään muutokset läpi.
+
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/9b0fca84-2dc1-44a4-bcc6-56139533ab2d)
 
 Lokista katsottuna tiedosto "Grute" on päivittänyt lisätyn rivin tiedot. Tiedosto "Poro" käsittelee muuttunutta riviä näyttämällä edellisen rivin punaisella ja miinusetumerkillä poistuneena ja sen korvanneen tekstin vihreänä plus etumerkillä 
 Tästä päättelen, että gitin loki merkkaa muutokset aina täysin poistuneina ja uudelleen tehtyinä, eikä yritä näyttää muutosta muulla tavalla.
 
+
+# e) 
 
 
 
