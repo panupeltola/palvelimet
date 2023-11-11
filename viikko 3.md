@@ -104,7 +104,35 @@ Sain komennon toimimaan ja pääsin nano ikkunaan, mihin listaan seuraavaksi kä
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/9633ff31-2e36-4624-9cda-75f1680c5268)
 
-![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d2c5b834-85af-4f03-acea-838b2dd9b729)
+Lisätty teksi.
+
+
+Terminaali antoi seuraavan vastauksen tallennettuani ja poistuttuani ikkunasta.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/adaecbae-0a52-400e-b5bb-70dfd0fa7c19)
+
+Tarkastan seuraavaksi näkyykö tiedosto verkkoselaimessa.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ad722df0-9035-47a5-ab72-0b6c13ec1847)
+
+Tiedostoa ei näy, mutta tajusin etten ole vielä käyttänyt 'git push' komentoa ajaakseni niitä verkkoon.
+Ajan kuitenkin 'git pull' komennon ennen hyvän työmallin vuoksi.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/0250504b-6010-47a8-af83-00ad1983ed67)
+
+Uusi tiedosto näkyy nyt myös repositoriossa. Huomiona tähän, kuva on otettu välittömästi 'git push' komennon jälkeen, mutta commit ajoituksessa näkyy 8 minuuttia sitten. Tästä päättelin, että commit aika määräytyy 'git commit' komennon ajasta eikä 'git push' ajasta
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d9dd2486-f64f-4a64-b40a-5029371a68fe)
+
+Tarkastan vielä, että myös sisältö on tullut mukana.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/974919ea-d201-4cb2-8434-eca810b21fe7)
+
+Oikealta näyttää.
+
+
+
+
 
 
 
