@@ -1,4 +1,4 @@
-![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/41046f1f-43bd-42dd-9dd6-260f01fece58)# Host ympäristö:
+# Host ympäristö:
 * Windows 10
 * Intel Core i7-10770K
 * Nvidia GeForce 3080
@@ -204,7 +204,50 @@ Lokista katsottuna tiedosto "Grute" on päivittänyt lisätyn rivin tiedot. Tied
 Tästä päättelen, että gitin loki merkkaa muutokset aina täysin poistuneina ja uudelleen tehtyinä, eikä yritä näyttää muutosta muulla tavalla.
 
 
-# e) 
+# e) Yhteistyötä
+
+Yritän lisätä käyttäjää käyttäen deploy keys menetelmää. (GitHub Docs)
+
+Alustan toisen virtuaalikoneen ja luon sille uuden ssh avaimen.
+
+Latasin toiselle virtuaalikoneelle gitin ja loin ssh avaimen komennolla 'ssh-keygen' ja kopioin julkisen avaimen projektin deploy keys osioon. Yritän seuraavaksi kloonata repositorion.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/742abb3d-c15f-4dd8-949e-1cb5303480af)
+
+Repositorio kloonattu, muutan vielä sähköpostin ja käyttäjänimen, jotten saa virhettä yrittäessäni ajaa 'git commit' komentoa, kuten aiemmin kävi.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/fcf476cd-9f29-417c-84fb-a40b966eca4b)
+
+Yritän tehdä muutoksia ja ajaa ne läpi.
+
+Katosessani tiedostojani repositoriossa huomaan, että viimeisen commitin muutokset eivät ole muuttuneet. Aloin epäilemään muistinko ajaa komentoa 'git push' session lopuksi.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/4a702bd4-f0a7-4738-b891-14e400a06b54)
+
+Komento oli unohtunut ajaa ja nyt muutokset näkyvät muille myös ajettuani 'git pull' komennon.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/740fd91e-1ba2-42d8-89b1-3068abddd31a)
+
+Koitan tehdä muutoksia uudella käyttäjällä.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/39f5d32c-9cbb-408e-ab90-8ab8b2954992)
+
+Unohdin ottaa kuvan tekemistäni muutoksista, mutta sen pitäisi näkyä kun tarkastan asian toisella virtuaalikoneellani.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8f1516bc-13c7-4320-8f1b-95ee38bd7ae8)
+
+Muutos ja käyttäjä näkyvät oikein. Totean toisen käyttäjän lisäämisen onnistuneen.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
