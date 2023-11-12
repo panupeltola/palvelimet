@@ -35,7 +35,7 @@ Ei päivitettävää eikä asennettavaa, joten uusin Git on asennettuna.
 Aloitan yrittämällä luoda yhteyttä ssh linkillä GitHubin sivuilta.
 GitHub kuitenkin ilmoittaa jo tässä vaiheessa, että SSH-salausavainta ei ole, joten nähdäkseni on turha mennä pidemmälle ennen kuin tämä ongelma on ratkaistu.
 
-Luon SSH-avainparin komennolla 'ssh-keygen'
+Luon SSH-avainparin komennolla 'ssh-keygen' (Karvinen, 2023)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/3462d4e5-3c75-4a61-84cd-8a183dfd5ae0)
 
@@ -82,7 +82,7 @@ Nyt komennolla 'git status' näen tekemieni muutosten tilan. Näen, ettei test.p
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/a8344289-5af5-4590-a8da-c5cb1d44ca55)
 
-Teen sen seuraavaksi komennoilla 'git add .' ja 'git commit'
+Teen sen seuraavaksi komennoilla 'git add .' ja 'git commit' (Karvinen, 2023)
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/64f4aeca-3cd3-4133-9cd4-8201e702b31d)
 
 Ajettuani komennon, tuli virhe, ettei käyttäjälleni ole vielä määritetty sähköpostia tai nimeä. Näille annettiin komennot virheviestissä. Lisään nämä ja yritän ajaa komentoa uudestaan.
@@ -238,6 +238,10 @@ Unohdin ottaa kuvan tekemistäni muutoksista, mutta sen pitäisi näkyä kun tar
 
 Muutos ja käyttäjä näkyvät oikein. Totean toisen käyttäjän lisäämisen onnistuneen.
 
+
+Lähteet:
+T. Karvinen, 2023, Infra as Code 2023, https://terokarvinen.com/2023/configuration-management-2023-autumn/, Luettu 12.11.2023
+GitHub Docs, 2023, Managing deploy keys, https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys, Luettu 12.11.2023
 
 
 
