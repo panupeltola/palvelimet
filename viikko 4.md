@@ -69,6 +69,51 @@ Lisään moduulin top.sls tiedostoon ja ajan komennon 'sudo salt '*' state.apply
 
 Tällä kertaa salt ajoi molemmat moduulit.
 
+# c)
+
+Kohtien b ja c välissä on vaihtunut päivä ja Vagrantin avulla luodut virtuaalikoneet on luotu uudestaan, joten aikaisempien kohtien tiedostoja ei enää ole olemassa.
+
+Luon uuden tiedoston state.apply toiminnolla ja haluan nähdä, että se menee oikeaan kansioon.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/4410ba2f-f328-4c2d-873d-095b516eaf2d)
+
+Ajan komennon komennon 'sudo salt '*' state.apply apache'
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/b9d883c2-2ec0-4f14-bc93-8b279574ccde)
+
+Sain ilmoitukseksi virheen, yritän lisätä kansiopolun alkuun vielä yhden vinoviivan jos ongelma korjautuisi sillä. 
+
+Sama virheviesti tuli yhä. Epäilen ongelmaksi sitä, että koneille ei ole asennettu apache2 palvelinta, yritän asentaa sen ensin.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/fb465803-2cab-46dc-b690-419a37d4e296)
+
+Asennettuna ja esimerkki vastauksesta, asennus onnistui.
+Ajoin myös 'sudo salt '*' state.apply apache' komennon uudestaan.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/a0e5f31f-869e-405d-8fe7-3792cd13301d)
+
+Tällä kertaa virhe on poistunut.
+Varmistan vielä, että tiedostojen sisältö on muuttunut komennolla 'sudo salt '*' cmd.run 'cat /var/www/html/testi.txt''
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/c36893cd-51bb-4204-9dd6-114310d20773)
+
+Molemmat koneet antavat vastaukseksi oikean vastauksen. Poistan testitiedoston ja apachen laitteilta.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/b396a880-85bd-408d-9597-88b358cac6b5)
+
+Testitiedosto poistettu
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/a987abb4-6d63-4b9c-87a5-5d05cf6a31dc)
+
+Apache poistettu
+
+Seuraavaksi yritän automatisoida apache2 palvelimen luomisen, käynnistämisen ja tiedon muuttamisen.
+Loogisesti ajateltuna järjestyksen on myös oltava tämä.
+
+
+
+
+
 
 
 
