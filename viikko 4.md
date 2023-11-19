@@ -212,8 +212,12 @@ Muutos ajettiin läpi myös muille koneille.
 
 
 # Lähteet:
+
 T. Karvinen, 2023, Salt Vagrant - automatically provision one master and two slaves, https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file, luettu 18.11.2023
-T. Karvinen, 2023,  
+T. Karvinen, 2023, Infra as Code 2023, https://terokarvinen.com/2023/configuration-management-2023-autumn/, Luettu 18.11.2023
+T. Karvinen, 2018, Pkg-File-Service – Control Daemons with Salt – Change SSH Server Port, https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh, luettu 19.11.2023
+Salt Project, Rules of YAML, https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml, luettu 19.11.2023
+Salt Project, State Modules, https://docs.saltproject.io/salt/user-guide/en/latest/topics/states.html#state-modules, Luettu 19.11.2023
 
 
 
