@@ -111,6 +111,34 @@ Seuraavaksi yritän automatisoida apache2 palvelimen luomisen, käynnistämisen 
 Loogisesti ajateltuna järjestyksen on myös oltava tämä.
 
 
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ec99fce8-8a05-41f7-ae42-380d602ad7f1)
+
+Määritetty init.sls tiedosto.
+
+Ajan komennon 'sudo salt '*' state.apply apache'
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d09a85e7-d907-4044-9891-47d6637e88a0)
+
+t002
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/15e78ac7-0b5a-4a78-a8cf-e0163f62b048)
+
+t002 yhteenveto
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/0cb76b4a-d95e-46d9-9d90-61e174891e10)
+
+t001 yhteenveto
+
+Varmistan vielä, että palvelimet ovat pystyssä ja niiden sisältö on muutettu komennolla sudo salt '*' cmd.run 'curl 127.0.0.1'
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ebc78720-6539-4e5a-b582-1ae7254f08fd)
+
+
+Vastaus näyttää muutetun sisällön, totean määrityksen onnistuneeksi.
+
+
+
+
 
 
 
