@@ -1,3 +1,31 @@
+# x) 
+
+Salt Vagrant - automatically provision one master and two slaves (Karvinen, 2023)
+
+* Tekstissä käydään läpi saltin tilojen luominen erillisille tiloille sekä myös top.sls tiedoston luominen, jolla voidaan automatisoida tilojen ajamista
+
+Rules of YAML (Salt Project)
+
+* YAML on yhden tyyppinen syntaksi joka käyttää hyväkseen listoja, sanakirjoja ja normaaleja listoja.
+* YAML toimii avain-arvo yhdistelmien avulla.
+* Ylipäätään YAML syntaksi on erittäin tarkka ja välilyönneillä on paljon merkitystä.
+
+Salt states (Salt Project)
+* Saltin states komennoilla voidaan automatisoida ja erotella erittäin tehokkaasti verkon eri tarpeita ja laitteita toisistaan.
+* Laaja määrä määrityksiä ja YAML syntaksin sallima listaus mahdollistaa monimutkaisten konfiguraatioiden yksinkertaistamista ja varmentamista sekä tarkentamista halutulle alustalle.
+* Saltin kansiorakenteella on tarkka tarkoitus tiedostojen skaalan kannalta. Esimerkiksi onko jokin tiedosto tarkoitettu kaikille käytettäväksi vai moduulikohtaisesti.
+
+Pkg-File-Service – Control Daemons with Salt – Change SSH Server Port (Karvinen, 2018)
+
+* Ohjeessa luodaan uusi moduuli ssh palvelimen ajamista ja määrittämistä varten
+* Moduuli opastetaan tarkkailemaan juurikansioon tehtyä sshd_config tiedostoa ja muuttamaan sitä kaikilta laitteilta, mikäli se muuttuu herralla
+* Lopuksi moduuli ajetaan
+
+
+
+
+
+
 # a)
 Aloitan luomalla Karvisen ohjeen mukaisesti verkkoympäristön yhdellä herralla ja kahdella orjalla.
 Vagrantfile on jo määritetty aikaisempien tehtävien yhteydessä, joten en muuta sitä tässä vaiheessa.
@@ -23,7 +51,8 @@ Kaikki näyttäisi toimivan, joten ryhdyn kokeilemaan saltin 'state.apply' komen
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7203cef6-fdef-4981-8c5c-a26bd3bde9ce)
 
-Loin ohjeen mukaisesti kansion /srv/salt/heimaailma/, luonnin yhteydessä totesin, että ilmeisesti sisennettyjä kansioita ei voi luoda kahta kerrallaan mikäli kumpaakaan niistä ei ole olemassa.
+Loin ohjeen mukaisesti kansion /srv/salt/heimaailma/, luonnin yhteydessä totesin, että ilmeisesti sisennettyjä kansioita ei voi luoda kahta kerrallaan mikäli kumpaakaan niistä ei ole olemassa. (Karvinen, 2023)
+Myöhemmin tajusin virheen johtuvan siitä etten käyttänyt komentoa 'mkdir -p /xxx'
 Luon seuraavaksi tiedoston init.sls ja siirryn muokkaammaan sitä komennolla 'sudoedit init.sls'
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/84718d46-5f7e-46d4-ad51-569ef6c55950)
@@ -42,7 +71,7 @@ Koneet vastaavat oikean sisällön, joten oletan tilan toimivan.
 
 # b)
 
-Luon top.sls tiedoston Karvisen ohjeiden mukaisesti.
+Luon top.sls tiedoston Karvisen ohjeiden mukaisesti. (Karvinen, 2023)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/e1f130d8-56c4-448b-9896-76d7c62fc187)
 
@@ -135,6 +164,64 @@ Varmistan vielä, että palvelimet ovat pystyssä ja niiden sisältö on muutett
 
 
 Vastaus näyttää muutetun sisällön, totean määrityksen onnistuneeksi.
+
+
+
+
+# d)
+
+Luon uuden moduulin nimeltä ssh ja lisään siihen
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ece281fe-7a08-4f0d-85a3-45ebf336082f)
+
+Yritin saada tehtävää tehtyä, mutta en saanut watch komentoa toimimaan vaikka syntaksin ja saltin ohjeiden mukaan sen pitäisi olla oikein.
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/94bb5937-5be4-4cbd-84b2-013d1656f224)
+
+Löysin tässä vaiheessa karvisen sivuilta ohjeen ongelman ratkaisuun ja päivitin init.sls tiedoston.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/c545eabe-7522-49c6-b111-55d582e43430)
+
+
+Ajettuani komennon sain seuraavan virheen:
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/b26392ef-fd22-470e-9a16-1bf3003bda41)
+
+Kopioin samassa tiedostossa näytetyn ohjeen sshd_config tiedoston luomiselle.
+Loin sen mukaan tiedoston ja ajoin komennon 'sudo salt '*' state.apply ssh' uudelleen saaden seuraavan virheen.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/dca7dedd-6c4a-42fd-b043-bca1d954ec61)
+
+
+Huomasin, että minulla on virheellinen id file.managed polussa (on sshd vaikka pitäisi olla ssh)
+
+Korjasin virheen ja ajoin komennon uudelleen.
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/1c612e73-8100-4ec2-8b65-c627e3085612)
+
+
+Vihdoin vihreää ja komento saatiin ajettua läpi.
+
+Katsoin vielä mitä tapahtuu jos muutan sshd_config tiedostossa jotain ja ajan tiedoston uudelleen.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/39b9711d-dfb3-42b6-a5d7-2748142a0d0f)
+
+Muutos ajettiin läpi myös muille koneille.
+
+
+# Lähteet:
+T. Karvinen, 2023, Salt Vagrant - automatically provision one master and two slaves, https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file, luettu 18.11.2023
+T. Karvinen, 2023,  
+
+
+
+
+
+
+
+
 
 
 
