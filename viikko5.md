@@ -208,6 +208,7 @@ Sain ajaessa seuraavan virheen:
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7e24bf27-15f5-47e2-955f-0b44d2489695)
 
+Korjasin tilan muuttamalla kohdan - mode: "0755" > file_mode: "0755"
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/39017e14-2990-422d-b722-fd1a2184448b)
 
