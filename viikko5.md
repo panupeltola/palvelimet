@@ -53,6 +53,52 @@ Päätin muuttaa teemaani Firefox selaimessa.
 
 Teema vaihdettu tummaksi polusta "asetukset > yleiset > Kieli ja ulkoasu
 
+Nyt etsin muutosta äsken käytetyllä komennolla.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/887f7058-72f8-476a-b264-58b0e1b0737c)
+
+Ei muuttuneita tiedostoja oikeassa aikaikkunassa (Kello todellisuudessa 9:43)
+Yritän muuttaa jotain toisen ohjelman asetusta ja katsoa vaikuttaako se tiedostoihin.
+Muutin Libre Writerin tietoja
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ac2c20dd-8079-45eb-9cf4-cf5aec3d5eb7)
+
+Ajan komennon uudelleen.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/7186352a-760f-4e6b-bf9f-5e572ee87fc2)
+
+
+Mikään ei ole muuttunut oikeassa aikaikkunassa.
+
+
+Yritän vielä muuttaa suoraan Debianin asetuksia muokkaamalla asetusta "Tyhjän näytön viive" 5 minuutista 15 minuuttiin
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/af54c99d-7dbd-4514-b540-cf66b049c09b)
+
+Mikään ei muuttunut vaikka säädin useita asetuksia ja käynnistin koneen uudelleen.
+Lopulta yritin muuttaa komentoriviltä apache2 asetusta kotikansion asentamisesta ja sen muutokset tulivat näkyviin.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/bbd3757e-17eb-4435-b840-dc034ccb9c45)
+
+Lopputulemana on, etten tiedä mihin graaffisessa käyttöliittymässä tehdyt muutokset menevät.
+
+
+# c) Komennus
+
+Vaihdan  loppuja tehtäviä varten Karvisen ohjeella tehtyihin Vagrant koneisiin.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
