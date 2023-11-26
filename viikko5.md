@@ -165,7 +165,7 @@ Aloitan luomalla kolme yksinkertaista komentoa vastaavalla tavalla kuin aiemmin.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/8b51ac26-ed54-4412-99f5-c9a5b16482c6)
 
-yksi
+yksi (shebang muokattu oikeaksi myöhemmin)
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/6af6c96a-887b-4b30-88dd-37c0fd75414b)
 
@@ -241,48 +241,10 @@ Käyttöoikeudet ja tiedostot vaikuttavat oikeilta, yritän vielä ajaa komennot
 Ja niin on lisätty kansiollinen komentoja.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Lähteet:
-
-'man find', Free Software Foundation Inc, 2021
-'man sort', M. Haertel & P. Eggert, 2020
+* T. Karvinen, 2023, Salt Vagrant - automatically provision one master and two slaves, https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file, luettu 26.11.2023
+* T. Karvinen, 2023, Infra as Code 2023, https://terokarvinen.com/2023/configuration-management-2023-autumn/, Luettu 26.11.2023
+* T. Karvinen, 2018, Apache User Homepages Automatically – Salt Package-File-Service Example, https://terokarvinen.com/2018/04/03/apache-user-homepages-automatically-salt-package-file-service-example/, luettu 26.11.2023
+* Salt Project, file.recurse, https://docs.saltproject.io/en/latest/ref/states/all/salt.states.file.html#salt.states.file.recurse, luettu 26.11.2023
+* 'man find', Free Software Foundation Inc, 2021
+* 'man sort', M. Haertel & P. Eggert, 2020
