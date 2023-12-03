@@ -1,3 +1,19 @@
+# x) 
+
+Halonen, Rajala ja Ollikainen 2023: Installing Windows 10 on a virtual machine
+
+* Ohjeessa opastetaan asentamaan Windows 10 virtuaaliympäristöön
+* Uutena tässä ohjeessa on host-only network adapterin käyttäminen.
+
+LSB Workgroup, The Linux Foundation 2015: Filesystem Hierarchy Standard
+
+* Erittäin looginen järjestelmä tiedon hallitsemiseen.
+* Kappaleessa 3 selostettu hyvin ja lyhyesti kaikkien root kansioiden pääfunktio
+* Kappalleessa 4 käyty käyttäjän hakemistoja löpi
+* Itselle merkittävimmät kansiot ovat olleet /etc/, /tmp/ ja /srv/
+* En ole natiivi linuxin käyttäjä, joten tullut oikeastaan vain tehtävien yhteydessä käytettyä. Tästä syystä muut eivät ole niin hyvin hallussa.
+
+
 # a) Asenna Windows virtuaalikoneeseen
 
 Käytän tässä tehtävässä ympäristönä Vagrantilla tehtyä verkkoympäristöä
@@ -73,6 +89,26 @@ Ping toimii koneiden välillä.
 Yritän asentaa saltin uudelleen.
 
 Lopputulos on sama, master ei löydä konetta.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/1bf4d9b6-6ed7-4edb-bd40-351574f19466)
+
+Yritän vielä luoda koneet uudelleen.
+
+Loin koneet uudelleen, mutta mikään ei tunnu toimivan.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/2e50e5dd-a529-4c44-98da-817d1324f781)
+
+Olen yrittänyt nyt saada yhteyttä toimimaan useamman tunnin, eikä mikään tunnu auttavan. Luovutan tehtävän suhteen tältä erää. Valitettavasti myös seuraavat tehtävät jäävät tekemättä, sillä yhteys ei toimi.
+Toivon oppivani yhteyden muodostamisen seuraavan luennon ohjeiden avulla.
+
+
+Lähteet:
+
+LSB Workgroup, The Linux Foundation 2015: Filesystem Hierarchy Standard, https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html, luettu 3.12.2023
+Halonen, Rajala ja Ollikainen, 2023 , Installing Windows 10 on a virtual machine, https://github.com/therealhalonen/PhishSticks/blob/master/notes/ollikainen/windows.md, luettu 3.12.2023
+T.Karvinen, 2023, Infra as Code 2023, https://terokarvinen.com/2023/configuration-management-2023-autumn/, luettu 3.12.2023.
+Saltproject, 2023, Windows Install guide, https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/windows.html, luettu 3.12.2023
+
 
 
 
