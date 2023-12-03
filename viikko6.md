@@ -44,6 +44,47 @@ Käynnistän asennuksen jälkeen saltin.
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d2a1982a-7089-48c5-9210-ac8083e4527e)
 
 
+Koetan 'salt-call --local' komentoa nähdäkseni toimiiko salt.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/de11f9a0-4fb9-4c70-af48-992987a9b5ce)
+
+
+Salt asennettu.
+
+Koetan vielä version.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/d109dd05-4e73-4498-a073-01b4058a89f9)
+
+
+Ja master koneelta 'sudo salt-key'
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/f21df98b-ab5f-487f-bfec-454a47e98129)
+
+
+'salt-key' ei löydä hakevaa konetta.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/78322d03-69df-4df0-ac12-900f70efb379)
+
+Ping toimii koneiden välillä.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/c86f36c1-fd51-4a89-9cb3-ee9ccf6fdec9)
+
+
+Yritän asentaa saltin uudelleen.
+
+Lopputulos on sama, master ei löydä konetta.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
