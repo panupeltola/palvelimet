@@ -100,6 +100,85 @@ Loin alla olevan komentorivin
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/ebfcdca7-c7f7-4075-a980-98290a5a6da4)
 
+
+SSH-avaimen luontia en keksi mitään tapaa automatisoida ja tässä tapauksessa oletetaan ystäväni sen osanneen lähettää, jotta saan sen lisättyä GitHub repositorioni avaimiksi.
+Avain on myös sama kuin muita harjoitustehtäviäni tehneellä virtuaalikoneella, joten tässä tapauksessa vain oletetaan sen olevan kunnossa.
+Uuden avaimen olisin luonus 'ssh-keygen' komennolla ja kopioinut GitHub hakemistoni "Deploy Keys" osioon.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/87eb528f-585c-47fa-8ac9-b7ee221c8ebe)
+
+Komento kloonata repositorio oikeaan sijaintiin
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/cd0faeb9-861e-4cdc-8ba5-e4caa895c088)
+
+Loin neljä komentoa, joista 'gitin' ohjaa git hakemiston juureen, 'kloonaa' kloonaa git hakemiston oikeaan kansioon, 'gpp' varmistaa, että pull tapahtuu aina ennen pushia ja 'lisaakayttaja' kysyy ja muuttaa gitin käyttäjän asetukset.
+Nämä komennot on tuotu omaan kansioon, josta ohjaan ne eteenpäin toisen pään /usr/local/bin/ kansioon.
+Lisään sen seuraavaksi init.sls tiedostoon.
+
+Tila ajettu ja tiedostot päässeet perille.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/91340f54-4e35-46bc-9785-34e1cb592deb)
+
+Yritän seuraavaksi ajaa komentoa orjalla.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/5acfd375-e8a1-4a62-9efb-6fecd02cccb2)
+
+Arkkiviholliseni vinoviiva näyttäisi iskeneen jälleen, yritän korjata.
+
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/4c05d0ca-519f-44f7-b958-0b44cd11f191)
+
+
+Sain kaikki korjattua ja yrtitin ajaa niitä moduulin yhteydessä.
+
+Ongelmaksi muodostui, että git ei tykkää kun sen kanssa käytetään sudo käyttäjää. Tästä syystä sain jatkuvaa erroria.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/adb447ce-5433-4668-892d-30af7e7c0cf4)
+
+Lopulta kuitenkin sain ajettua komentoni läpi ja git hakemisto on kopioitu.
+
+Yritän vielä ajaa toista komentoani lisaakayttaja ja katsoa saanko muutettua asetuksia, sillä sekään ei toimuinut saltin kautta.
+
+Tällä kertaa ei ainakaan tullut virhettä.
+Huomasin yrittäessäni luoda tiedostoa VSCodiumilla, että tiestoa ei voi luoda. Se johtunee käyttöoikeuksien puutteesta.
+Siirrän git kansion sijainnin jos se auttaisi.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/3869b91c-9689-4b8a-9428-35705f613db4)
+
+Asiaa tutkittuani tajusin, että ongelma on käyttöoikeuksien puutteesta johtuva ja annoin kansioon kaikille täydet oikeudet. Kansion ei pitäisi olla tietoturvalle vaarallinen, enkä keksi miten omistajaa saisi vaihdettua muuten. Yritän kloonata uudestaan.
+
+Kloonaus ei vieläkään onnistunut automaationa. Tällä kertaa kuitenkin komento 'kloonaa' toimi suoraan ilman sudoa.
+Koetan nyt luoda kansion VSCodiumilla ja viedä sen gittiin.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/43b200d1-f379-4169-b2c2-c71d39b30c0e)
+
+
+Tiedosto saatu perille.
+
+Haluan vielä yrittää saanko muutettua nimeäni tekemälläni 'lisaakayttaja' komennolla.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/5b61fb59-e1a1-45b3-96e2-bf0fb85f7b82)
+
+
+Uusi tiedosto tehty.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/f8680f04-5061-494b-b899-d4284cfd31ee)
+
+Uusi tiedosto ja nimi näkyvät muuttuneena.
+
+![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/e7ba9183-2b97-4049-968e-4849a05f74fc)
+
+
+# Loppupäätelmät
+
+Halusin kokeilla hiukan erilaisia asioita ja miten ne toimivat Saltilla automatisoituina. Iso osa hallinnasta jäi käsin tehtäväksi ja 'cmd.run' komennon rajoitteet tulivat selkeästi vastaan. Itseäni auttoi kuitenkin paljon Saltin virheilmoitukset.
+Nyt lopputilanteessa saavutin mitä halusin. Sain luotua palomuurilla suojatun koneen, missä on git, VSCodium ja UFW asennettuna. Lisäksi tein komentoja, jotka helpottavat ja varmentavat gitin käyttöä. Salt on erittäin voimakas työkalu, mutta esimerkiksi paketinhallinta virallisten lähteiden ulkopuolella on hyvin työlästä.
+
+
+
+
+
+
   
   
 
