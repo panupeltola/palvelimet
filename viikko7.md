@@ -174,6 +174,13 @@ Uusi tiedosto ja nimi näkyvät muuttuneena.
 Halusin kokeilla hiukan erilaisia asioita ja miten ne toimivat Saltilla automatisoituina. Iso osa hallinnasta jäi käsin tehtäväksi ja 'cmd.run' komennon rajoitteet tulivat selkeästi vastaan. Itseäni auttoi kuitenkin paljon Saltin virheilmoitukset.
 Nyt lopputilanteessa saavutin mitä halusin. Sain luotua palomuurilla suojatun koneen, missä on git, VSCodium ja UFW asennettuna. Lisäksi tein komentoja, jotka helpottavat ja varmentavat gitin käyttöä. Salt on erittäin voimakas työkalu, mutta esimerkiksi paketinhallinta virallisten lähteiden ulkopuolella on hyvin työlästä.
 
+Lähteet:
+
+T. Karvinen, 2023, Infra as Code 2023, https://terokarvinen.com/2023/configuration-management-2023-autumn/, Luettu 9.12.2023
+T. Karvinen, 2021, Run Salt Command Locally, https://terokarvinen.com/2021/salt-run-command-locally/, Luettu 9.12.2023
+Salt Project, salt.states.cmd, https://docs.saltproject.io/en/latest/ref/states/all/salt.states.cmd.html, luettu 9.12.2023
+VSCodium, Install, https://vscodium.com/#install, luettu 9.12.2023
+
 
 
 
