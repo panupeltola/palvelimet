@@ -1,3 +1,14 @@
+Host ympäristö:
+
+    Windows 10
+    Intel Core i7-10770K
+    Nvidia GeForce 3080
+    32 GB RAM
+    Virtualbox 7.0.12
+    Debian 11 virtuaalikone
+    Vagrant 1 herra 2 orjaa
+
+
 # Moduulin idea
 
 Moduulin tarkoituksena on luoda mielikuvitusystävälleni luomaani git repositorioon pääsy, sekä asentaa VSCodium ja sen vaatimat asetustiedostot. Suunnitellussa moduulissa kaikkea ei voi tehdä täysin automatisoidusti.
