@@ -156,6 +156,9 @@ Siirrän git kansion sijainnin jos se auttaisi.
 
 ![kuva](https://github.com/panupeltola/palvelimet/assets/148875059/3869b91c-9689-4b8a-9428-35705f613db4)
 
+Edit: 12.12.2023:
+Init.sls tiedostossa on suurena tietoturvariskinä tila "777" asiasta oppineena oikea tapa luoda oikeudet käyttäjille olisi lisätä ne oikeaan ryhmään, joilla oikeus muokata kansiota. Tila "777" antaa kaikille käyttäjille oikeuden lukea, kirjoittaa ja ajaa kansiota ja sen sisältöä.
+
 Asiaa tutkittuani tajusin, että ongelma on käyttöoikeuksien puutteesta johtuva ja annoin kansioon kaikille täydet oikeudet. Kansion ei pitäisi olla tietoturvalle vaarallinen, enkä keksi miten omistajaa saisi vaihdettua muuten. Yritän kloonata uudestaan.
 
 Kloonaus ei vieläkään onnistunut automaationa. Tällä kertaa kuitenkin komento 'kloonaa' toimi suoraan ilman sudoa.
